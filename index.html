@@ -1,37 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Order summary card</title>
 
-  Order Summary
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
+  </head>
+  <body>
+    <main class="flex_dir_column content">
+      <div class="attribution">
+        Coded by
+        <a href="https://github.com/jrrv99" target="_blank">José Riobueno</a>.
+      </div>
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+      <article class="card">
+        <img
+          class="card__hero"
+          src="./images/illustration-hero.svg"
+          alt="Order summary hero"
+        />
 
-  Annual Plan
-  $59.99/year
+        <section class="flex_dir_column card__body">
+            <h1 class="title card__title">Order Summary</h1>
+            <p class="card__text text_color_dblue">
+              You can now listen to millions of songs, audiobooks, and podcasts
+              on any device anywhere you like!
+            </p>
+          <div class="flex_dir_column card__order">
+            <div class="flex_dir_column order__products">
+              <div class="product__slot">
+                <div class="product__description">
+                  <img class="product__icon" src="./images/icon-music.svg" alt="" />
+                  <div class="product__details">
+                    <p class="title product__title">Annual Plan</p>
+                    <p class="product__price text_color_dblue">$59.99/year</p>
+                  </div>
+                </div>
+                <a href="" class="product__change">Change</a>
+              </div>
+            </div>
 
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+            <button class="btn order__payment">Proceed to Payment</button>
+            <button class="btn order__cancel text_color_dblue">Cancel Order</button>
+          </div>
+        </section>
+      </article>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >.
+      </div>
+    </main>
+  </body>
 </html>

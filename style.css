@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --pale_blue: hsl(225, 100%, 94%);
+  --bright_blue: hsl(245, 75%, 52%);
+  --very_pale_blue: hsl(225, 100%, 98%);
+  --desaturated_blue: hsl(224, 23%, 55%);
+  --dark_blue: hsl(223, 47%, 23%);
+  --bg_btn_active: hsl(245, 83%, 68%);
+  --secondary-text-size: 0.75em;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.flex_dir_column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.content {
+  background: var(--pale_blue) url(./images/pattern-background-desktop.svg) no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+  padding: 2em;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  width: 18em;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 5px 1.25rem -5px var(--desaturated_blue);
+}
+
+.card__hero {
+  width: 100%;
+  resize: both;
+  object-fit: cover;
+  display: block; /* delete space after image */
+}
+
+.card__body {
+  padding: 2.1rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.title {
+  color: var(--dark_blue);
+}
+
+.card__title {
+  font-size: 1.3rem;;
+  font-weight: 900;
+}
+
+.card__text {
+  font-size: var(--secondary-text-size);
+}
+
+.card__order {
+  font-size: var(--secondary-text-size, 0.7em);
+}
+
+.product__slot, .product__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product__slot {
+  background-color: var(--very_pale_blue);
+  padding: 1.2rem;
+  border-radius: 0.75rem;
+}
+
+.product__icon { width: 2rem; }
+.product__details { margin-left: .5rem; }
+
+.product__title { font-weight: 700; }
+
+.text_color_dblue { color: var(--desaturated_blue); }
+
+.product__change { color: var(--bright_blue); }
+.product__change:hover { color: var(--bg_btn_active); }
+
+.btn {
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.order__payment {
+  padding: .7rem;
+  background-color: var(--bright_blue);
+  color: #fff;
+  border-radius: .5rem;
+}
+
+.order__payment:hover { background-color: var(--bg_btn_active); }
+
+@media (max-width: 425px) {
+  .content {
+    background: var(--pale_blue) url(./images/pattern-background-mobile.svg) no-repeat;
+  }
+}
